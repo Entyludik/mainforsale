@@ -1049,6 +1049,11 @@
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
+        function triggerHapticFeedback() {
+            if (navigator.vibrate) {
+                navigator.vibrate(200);
+            }
+        }
         function openGame(game) {
             triggerHapticFeedback();
             var ua = navigator.userAgent;
