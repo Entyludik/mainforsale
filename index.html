@@ -922,6 +922,11 @@
                 deviceOutput.classList.add("visible");
             }, 10);
         }
+        function triggerHapticFeedback() {
+            if (navigator.vibrate) {
+                navigator.vibrate(200);
+            }
+        }
          function startGame() {
             console.log(document.getElementById("device-output").textContent);
             if (document.getElementById("device-output").textContent.trim() === "Устройство не определено") {
@@ -1048,11 +1053,6 @@
 
         function currentSlide(n) {
             showSlides(slideIndex = n);
-        }
-        function triggerHapticFeedback() {
-            if (navigator.vibrate) {
-                navigator.vibrate(200);
-            }
         }
         function openGame(game) {
             triggerHapticFeedback();
